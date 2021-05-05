@@ -1,0 +1,3 @@
+export const ACTION_TYPES = {
+  START_APPLICATION: 'START_APPLICATION',
+};

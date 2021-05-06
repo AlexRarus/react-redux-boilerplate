@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { ITheme } from 'src/dal/theme/interfaces';
+import { ITheme } from 'src/components/palette/interfaces';
 
 import { changeThemeAction } from './actions';
 

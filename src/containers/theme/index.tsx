@@ -1,5 +1,4 @@
 import React from 'react';
-import { PageThemedWrapper } from 'src/style';
 
 import { connector, PropsFromRedux } from './connector';
 import { Row } from './style';
@@ -24,16 +23,21 @@ function ThemePage(props: PropsFromRedux) {
   };
 
   return (
-    <PageThemedWrapper theme={theme}>
+    <div>
       <Row>
         <label htmlFor="color">Color</label>
-        <input name="color" type="text" onChange={changeColorHandler} />
+        <input name="color" type="text" onChange={changeColorHandler} value={theme.color} />
       </Row>
       <Row>
         <label htmlFor="background">Background</label>
-        <input name="background" type="text" onChange={changeBackgroundHandler} />
+        <input
+          name="background"
+          type="text"
+          onChange={changeBackgroundHandler}
+          value={theme.background}
+        />
       </Row>
-    </PageThemedWrapper>
+    </div>
   );
 }
 

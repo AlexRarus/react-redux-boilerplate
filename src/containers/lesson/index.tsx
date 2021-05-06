@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { PageWrapper } from 'src/style';
 import TinyEditor from 'src/components/tiny-editor';
 
 import { Message } from './style';
@@ -21,7 +20,7 @@ export default function Lesson() {
   };
 
   return (
-    <PageWrapper>
+    <div>
       <Message>Заголовок</Message>
       <input type="text" />
       <Message>Текст занятия</Message>
@@ -30,6 +29,6 @@ export default function Lesson() {
         onChange={onChangeLessonHTML}
         imageUploadAction={imageUploadAction}
       />
-    </PageWrapper>
+    </div>
   );
 }

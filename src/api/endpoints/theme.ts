@@ -1,5 +1,5 @@
 import { AxiosResponse } from 'axios';
-import { ITheme } from 'src/dal/theme/interfaces';
+import { ITheme } from 'src/components/palette/interfaces';
 
 export interface IThemeAPI {
   getTheme(): AxiosResponse<any>;

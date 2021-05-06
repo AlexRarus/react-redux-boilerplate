@@ -1,14 +1,9 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { COLORS, FONTS } from 'src/components/palette';
-import { ITheme } from 'src/dal/theme/interfaces';
-
-interface IPropsWithTheme {
-  theme: ITheme;
-}
 
 export const GlobalStyleApp = createGlobalStyle`  
   html {
-    background-color: ${COLORS.grey5};
+    background-color: ${COLORS.grey[50]};
     width: 100%;
     height: 100%;
     display: table;
@@ -19,7 +14,7 @@ export const GlobalStyleApp = createGlobalStyle`
     margin: 0;
     padding: 0;   
     font-size: 14px;
-    color: ${COLORS.grey90};   
+    color: ${COLORS.grey[900]};   
     width: 100%;
     display: table-cell;
     
@@ -55,10 +50,7 @@ export const GlobalStyleApp = createGlobalStyle`
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    
-    @media only screen and (max-width: 768px) { 
-        display: block;
-    }
+    flex-grow: 1;
   }     
   
   #ModalContainer {
@@ -69,20 +61,4 @@ export const GlobalStyleApp = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-`;
-
-export const ThemedBlock = styled.div<IPropsWithTheme>``;
-
-export const PageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-`;
-
-export const PageThemedWrapper = styled(ThemedBlock)`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  color: ${({ theme }) => theme.color};
-  background: ${({ theme }) => theme.background};
 `;

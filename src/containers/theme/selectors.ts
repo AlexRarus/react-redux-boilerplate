@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 import { RootState } from 'src/store';
-import { ITheme } from 'src/dal/theme/interfaces';
+import { ITheme } from 'src/components/palette/interfaces';
 
 export const themeSelector = createSelector(
   (state: RootState) => state.themeDal.theme,
